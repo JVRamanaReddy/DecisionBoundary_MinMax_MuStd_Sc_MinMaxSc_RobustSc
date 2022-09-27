@@ -1,0 +1,737 @@
+<style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;}
+  .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg .tg-6km8{background-color:#CBCEFB;border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-uqo3{background-color:#efefef;text-align:center;vertical-align:top}
+  .tg .tg-yj5y{background-color:#efefef;border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-34fe{background-color:#c0c0c0;border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-c4ww{background-color:#cbcefb;border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-5w3z{background-color:#ecf4ff;border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-d096{background-color:#C0C0C0;border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  .tg .tg-q13l{background-color:#ECF4FF;border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-714q{background-color:#EFEFEF;border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-0r9i{background-color:#ECF4FF;text-align:center;vertical-align:top}
+  .tg .tg-ku8n{background-color:#CBCEFB;text-align:center;vertical-align:top}
+  .tg .tg-c7wh{background-color:#C0C0C0;text-align:center;vertical-align:top}
+  .tg .tg-xmkd{background-color:#EFEFEF;text-align:center;vertical-align:top}
+  </style>
+<table class="tg">
+  <thead>
+    <tr>
+      <th class="tg-0pky"></th>
+      <th class="tg-0pky"></th>
+      <th class="tg-c3ow" colspan="16">Thoracic Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tg-c3ow"></td>
+      <td class="tg-c3ow"></td>
+      <td class="tg-5w3z" colspan="4">Min-Max Scaling</td>
+      <td class="tg-c4ww" colspan="4">Mean-Standard deviation Scaling</td>
+      <td class="tg-34fe" colspan="4">Sklearn's Standard Scaling</td>
+      <td class="tg-yj5y" colspan="4">Sklearn's MinMax Scaling</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow">Model</td>
+      <td class="tg-c3ow">Given Risk</td>
+      <td class="tg-5w3z" colspan="2">Prediction Risk</td>
+      <td class="tg-5w3z">Concluded Risk <br>from Prediction</td>
+      <td class="tg-5w3z">Decision Boundary</td>
+      <td class="tg-c4ww" colspan="2">Prediction Risk</td>
+      <td class="tg-c4ww">Concluded Risk <br>from Prediction</td>
+      <td class="tg-c4ww">Decision Boundary</td>
+      <td class="tg-34fe" colspan="2">Prediction Risk</td>
+      <td class="tg-34fe">Concluded Risk <br>from Prediction</td>
+      <td class="tg-34fe">Decision Boundary</td>
+      <td class="tg-yj5y" colspan="2">Prediction Risk</td>
+      <td class="tg-yj5y">Concluded Risk <br>from Prediction</td>
+      <td class="tg-yj5y">Decision Boundary</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>33260<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>H<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">11</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[33260].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">11</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[33260].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">11</td>
+      <td class="tg-34fe" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[33260].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">11</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[33260].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">16</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">16</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">16</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">16</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">10</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">10</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">10</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">10</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>77426<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>M<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">11</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[77426].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">11</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[77426].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">11</td>
+      <td class="tg-34fe" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[77426].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">11</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[77426].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">13</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">13</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">13</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">13</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">8</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">8</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">8</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">8</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>125026<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>L<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">12</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[125026].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">12</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[125026].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">12</td>
+      <td class="tg-34fe" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[125026].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">12</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[125026].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">7</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">7</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">7</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">7</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">8</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">8</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">8</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">8</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>142122<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>L<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">14</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[142122].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">14</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[142122].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">14</td>
+      <td class="tg-34fe" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[142122].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">14</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[142122].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">14</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">14</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">14</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">14</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">4</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">4</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">4</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">4</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>182910<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>L<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">10</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[182910].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">10</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[182910].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">10</td>
+      <td class="tg-34fe" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[182910].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">10</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[182910].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">9</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">9</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">9</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">9</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">13</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">13</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">13</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">13</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>184767<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>M<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">12</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[184767].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">12</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[184767].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">12</td>
+      <td class="tg-34fe" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[184767].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">12</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[184767].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">10</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">10</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">10</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">10</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">8</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">8</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">8</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">8</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>216686<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>L<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">9</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[216686].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">9</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[216686].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">9</td>
+      <td class="tg-34fe" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[216686].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">9</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[216686].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">18</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">18</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">18</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">18</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">2</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">2</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">2</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">2</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>219317<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>M<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">13</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[219317].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">13</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[219317].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">13</td>
+      <td class="tg-34fe" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[219317].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">13</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[219317].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">8</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">8</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">8</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">8</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">6</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">6</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">6</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">6</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>223409<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>L<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">8</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[223409].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">8</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[223409].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">8</td>
+      <td class="tg-34fe" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[223409].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">8</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[223409].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">9</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">9</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">9</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">9</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">10</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">10</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">10</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">10</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>227356<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>L<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">7</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[227356].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">7</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[227356].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">7</td>
+      <td class="tg-34fe" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[227356].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">7</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[227356].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">14</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">14</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">14</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">14</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">7</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">7</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">7</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">7</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>228870<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>H<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">13</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[228870].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">13</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[228870].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">13</td>
+      <td class="tg-34fe" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[228870].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">13</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[228870].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">8</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">8</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">8</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">8</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">10</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">10</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">10</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">10</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>231049<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>L<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">7</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[231049].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">7</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[231049].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">7</td>
+      <td class="tg-34fe" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[231049].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">7</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[231049].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">9</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">9</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">9</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">9</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">8</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">8</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">8</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">8</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>239580<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>M<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">16</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[239580].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">16</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[239580].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">16</td>
+      <td class="tg-34fe" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[239580].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">16</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[239580].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">6</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">6</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">6</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">6</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">7</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">7</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">7</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">7</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>241786<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>H<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">8</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[241786].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">8</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[241786].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">8</td>
+      <td class="tg-34fe" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[241786].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">8</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[241786].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">5</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">5</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">5</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">5</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">13</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">13</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">13</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">13</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>244250<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>L<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">6</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[244250].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">6</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[244250].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">6</td>
+      <td class="tg-34fe" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[244250].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">6</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>M<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[244250].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">13</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">13</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">13</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">13</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">10</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">10</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">10</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">10</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>248101<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>L<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">11</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[248101].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">11</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[248101].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">11</td>
+      <td class="tg-34fe" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[248101].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">11</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>H<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[248101].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">4</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">4</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">4</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">4</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">16</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">16</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">16</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">16</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow" rowspan="3"><br><br>248517<br></td>
+      <td class="tg-c3ow" rowspan="3"><br><br>H<br></td>
+      <td class="tg-5w3z">Low</td>
+      <td class="tg-5w3z">13</td>
+      <td class="tg-5w3z" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-5w3z" rowspan="3"><img src="Thoracic_Min-Max_LD1vsLD2_DecisionBoundary[248517].png" width="400" height="300"></td>
+      <td class="tg-c4ww">Low</td>
+      <td class="tg-c4ww">13</td>
+      <td class="tg-c4ww" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-c4ww" rowspan="3"><img src="Thoracic_Mu-Std_LD1vsLD2_DecisionBoundary[248517].png" width="400" height="300"></td>
+      <td class="tg-34fe">Low</td>
+      <td class="tg-34fe">13</td>
+      <td class="tg-34fe" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-34fe" rowspan="3"><img src="Thoracic_Sc_LD1vsLD2_DecisionBoundary[248517].png" width="400" height="300"></td>
+      <td class="tg-yj5y">Low</td>
+      <td class="tg-yj5y">13</td>
+      <td class="tg-yj5y" rowspan="3"><br><br>L<br><br></td>
+      <td class="tg-yj5y" rowspan="3"><img src="Thoracic_ScMinMax_LD1vsLD2_DecisionBoundary[248517].png" width="400" height="300"></td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">Medium</td>
+      <td class="tg-5w3z">9</td>
+      <td class="tg-c4ww">Medium</td>
+      <td class="tg-c4ww">9</td>
+      <td class="tg-34fe">Medium</td>
+      <td class="tg-34fe">9</td>
+      <td class="tg-yj5y">Medium</td>
+      <td class="tg-yj5y">9</td>
+    </tr>
+    <tr>
+      <td class="tg-5w3z">High</td>
+      <td class="tg-5w3z">5</td>
+      <td class="tg-c4ww">High</td>
+      <td class="tg-c4ww">5</td>
+      <td class="tg-34fe">High</td>
+      <td class="tg-34fe">5</td>
+      <td class="tg-yj5y">High</td>
+      <td class="tg-yj5y">5</td>
+    </tr>
+  </tbody>
+  </table>

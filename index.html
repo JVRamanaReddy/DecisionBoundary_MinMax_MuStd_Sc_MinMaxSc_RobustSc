@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ClassificationFigures</title>
+  <style>
+    .DecisionBoundary {
+      width: 350px;
+      height: 200px;
+    }
+
+    .first-table {
+      margin-bottom: 40px;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .textgap {
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+
+    .gap {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .fontsize {
+      font-size: 25px;
+    }
+
+    .itemfont {
+      font-weight: normal;
+      line-height: 35px;
+    }
+  </style>
+</head>
+<!--  -->
+<div>
+  <section class="fontsize">
+    <!-- Only three classes -->
+    <h1> Predicted results on (LINEAR) Decision Boundary in the B1 Classification </h1>
+    <h1> Approach : LOPO-CV (leave-one-patient-out cross-validation) </h1>
+      <!-- All four classes -->
+      <ol>
+        <ul> Comparison of the Training and Testing data's Normalization / Standardization <br />
+          (<span style="font-weight:bold"> Min-Max Approach </span> vs <span style="font-weight:bold">Mean-Standard deviation Approach </span> vs 
+          <span style="font-weight:bold"> Sklearn's Standard Scaling</span> vs <span style="font-weight:bold">Sklearn's Min-Max Scaling </span>) <br />
+        </ul>
+        <ul class="textgap"> <span style="font-weight:bold"> LD1 vs LD2 </span> </ul> 
+        <ol type="I">
+          <!-- Thoracic_LD1 vs LD2 -->
+          <li> CSS Data upto Thoracic vertebrae : LD1 vs LD2 </li>
+          <div class="first-table" include-html="Thoracic_withNoData_LD1vsLD2.html" id="Thoracic_withNoData_LD1vsLD2_file"> </div>
+        </ol>
+        <ul class="textgap"> <span style="font-weight:bold"> LD2 vs LD3 </span> </ul>
+        <ol type="II">
+          <!-- Thoracic_LD2 vs LD3 -->
+          <li> CSS Data upto Thoracic vertebrae : LD2 vs LD3 </li>
+          <div class="first-table" include-html="Thoracic_LD2vsLD3.html" id="Thoracic_LD2vsLD3_file"> </div>
+        </ol>
+      </ol>
+    </h2>
+  </section>
+    <!--    -->
+</div>
+<!--    -->
+
+
+
+
+
+
+
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/include-html.min.js"></script>
+
+</html>
